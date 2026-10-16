@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PromoBusca — Compare preços em promoção</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="logo">
+      <span class="logo-icon">🏷️</span>
+      <h1>Promo<span>Busca</span></h1>
+    </div>
+    <p class="tagline">Encontre os melhores sites com promoção e compare preços do menor para o maior.</p>
+
+    <form id="search-form" class="search-box" role="search" autocomplete="off">
+      <button type="button" class="btn-icon" id="btn-clear" title="Limpar busca" aria-label="Limpar busca">✕</button>
+      <input
+        type="text"
+        id="search-input"
+        name="q"
+        placeholder="Digite o nome do produto e pressione Enter…"
+        aria-label="Buscar produto"
+      />
+      <span class="mic" aria-hidden="true">🔍</span>
+      <button type="submit" class="btn-search">Pesquisar</button>
+    </form>
+
+    <div class="quick-tags" id="quick-tags">
+      <span class="label">Exemplos:</span>
+      <button class="tag" data-q="iPhone 15 128GB">iPhone 15</button>
+      <button class="tag" data-q="Notebook Dell Inspiron 15">Notebook</button>
+      <button class="tag" data-q="Tênis Nike Air Max">Tênis Nike</button>
+      <button class="tag" data-q="Smart TV 55 4K">Smart TV 55"</button>
+      <button class="tag" data-q="Air Fryer 4L">Air Fryer</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="status-area" class="status hidden" aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <p id="status-text">Pesquisando nas melhores lojas…</p>
+    </section>
+
+    <section id="results-area" class="results hidden">
+      <div class="results-header">
+        <h2 id="results-title">Resultados</h2>
+        <div class="sort-note">Ordenado do menor para o maior preço ↑</div>
+      </div>
+      <ol id="results-list" class="results-list"></ol>
+      <p class="disclaimer">
+        * Preços simulados para demonstração. Em produção, conecte esta interface a APIs de
+        comparação de preços (ex.: Buscapé, Zoom, Google Shopping) ou a um backend próprio.
+      </p>
+    </section>
+
+    <section id="empty-state" class="empty">
+      <div class="empty-icon">🛒</div>
+      <h2>Comece uma busca</h2>
+      <p>Digite o nome de um produto acima e pressione <kbd>Enter</kbd> para ver as melhores promoções, organizadas da mais barata para a mais cara.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>PromoBusca © 2026 — Demo de comparação de preços em HTML, CSS e JavaScript puro.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
